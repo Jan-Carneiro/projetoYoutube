@@ -11,8 +11,14 @@ require_once 'AcoesVideo.php';
                
 
         //MÉTODOS ESPECIAIS (construct, get, set)
-        function __construct(){
-                        
+        function __construct($ti){
+           
+            $this->titulo = $ti;
+            $this->avaliacao = 1;
+            $this->views = 0;
+            $this->curtidas = 0;
+            $this->reproduzindo = false;
+
         }
         
         //GET (fazer a correlação do GET com seus atributos)
@@ -52,13 +58,15 @@ require_once 'AcoesVideo.php';
         //MÉTODOS:
 
         public function play(){
-
+            $this -> reproduzindo = true;
         }
+
         public function pause(){
-
+            $this -> reproduzindo = false;
         }
-        public function like(){
 
+        public function like(){
+            $this -> curtidas ++;
         }       
         
                

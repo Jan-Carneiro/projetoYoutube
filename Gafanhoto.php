@@ -7,8 +7,13 @@ require_once 'Pessoa.php';
                
 
         //MÉTODOS ESPECIAIS (construct, get, set)
-        function __construct(){
-                     
+        function __construct($nome,$idade,$sexo,$login){
+            
+            $this -> nome = $nome;
+            $this -> idade = $idade;
+            $this -> sexo = $sexo;
+            $this -> login = $login;
+            $this -> totAssistido = 0;             
         }
         
         //GET (fazer a correlação do GET com seus atributos)
@@ -30,11 +35,8 @@ require_once 'Pessoa.php';
         //MÉTODOS:
 
                
-        public function ganharExp(){
-
-        }
         public function viuMaisUm() {
-             
+            $this -> totAssistido ++;           
         }
         
                 
