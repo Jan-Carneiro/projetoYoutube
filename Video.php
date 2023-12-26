@@ -39,20 +39,21 @@ require_once 'AcoesVideo.php';
         }
                 
         //SET (interligar o atributo com o seu parâmetro)
-        public function setTitulo($ti){
-            $this ->titulo = $ti;
+        public function setTitulo($titulo){
+            $this ->titulo = $titulo;
         }
-        public function setAvaliacao($av){
-            $this ->avaliacao = $av;
+        public function setAvaliacao($avaliacao){
+            $media = ($this -> avaliacao + $avaliacao)/$this -> views;
+            $this -> avaliacao = $media;
         }
-        public function setViews($vi){
-            $this ->views = $vi;
+        public function setViews($views){
+            $this ->views = $views;
         }
-        public function setCurtidas($cu){
-            $this ->curtidas = $cu;
+        public function setCurtidas($curtidas){
+            $this ->curtidas = $curtidas;
         }
-        public function setReproduzindo($re){
-            $this ->reproduzindo = $re;
+        public function setReproduzindo($reproduzindo){
+            $this ->reproduzindo = $reproduzindo;
         }
          
         //MÉTODOS:
